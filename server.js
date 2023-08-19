@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const productRoute = require('./routes/productRoute')
+const productRoute = require("./routes/productRoute");
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 
-app.use('/api/products', productRoute)
+app.use("/api/products", productRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello NODE API");
