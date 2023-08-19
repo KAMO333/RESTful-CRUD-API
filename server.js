@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const productRoute = require("./routes/productRoute");
+const errorMiddleware = require('./middleware/errorMiddleware')
 
 const app = express();
 
@@ -22,6 +23,8 @@ app.get("/", (req, res) => {
 app.get("/blog", (req, res) => {
   res.send("Hello Blog, My name is Kamogelo");
 });
+
+app.use(errorMiddleware)
 
 mongoose.set("strictQuery", false);
 mongoose
