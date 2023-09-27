@@ -12,7 +12,7 @@ const MONGO_URL = process.env.MONGO_URL;
 const FRONTEND = process.env.FRONTEND
 
 const corsOptions = {
-  origin: FRONTEND,
+  origin: 'https://rest-api-frontend-dot.netlify.app',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
